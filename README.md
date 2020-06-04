@@ -86,7 +86,6 @@ The clustering analysis is divided in 3 main parts:
 * Manually standardizing the data to give a positive value for neighborhoods above average and a negative value for the ones below the threshold.
     * Establishing the mean and standard deviation for each feature.
     * Calculating new values and replacing older values in previous main dataframe.
-    * The dataframe is presented as follow:
 ![](https://github.com/elliass/capstone_project/blob/master/images/standardization.png)
 * Clustering scaled features.
     * Tunning the parameter (k) using Elbow Method to get the optimal number of clusters.
@@ -96,7 +95,6 @@ The clustering analysis is divided in 3 main parts:
 * From the scaled values previously calculated, a scoring system is established.
     * Each attribute was standardized and then multiplied by a factor depending on the importance accorded to each attribute by the client.
     * Attributes are summed up afterwards in order to generate a score for each neighborhood.
-    * The data is then merged to main dataframe and presented as follow:
 ![](https://github.com/elliass/capstone_project/blob/master/images/score.png)
 * Filtering top 15 neighborhoods using the calculated score
 ![](https://github.com/elliass/capstone_project/blob/master/images/neighborhoodmap2.png)
