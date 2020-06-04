@@ -2,14 +2,16 @@
 Clustering Analysis of Toronto Neighborhoods
 
 ## 1.	Business Problem
-This study is aimed to help a small vegan restaurant/bar willing to open a new location in Toronto. The investors easily agreed to expand their activities in one of its neighborhoods as Toronto is the most populated city in Canada with high quality of living. 
+This study is aimed to help a small vegan restaurant willing to open a new location in Toronto. The investors easily agreed to expand their activities in one of its neighborhoods as Toronto is the most populated city in Canada with high quality of living. 
 Beyond this information, the investors seem to struggle in gathering sufficient details that will help them identify the appropriate location in Toronto where to establish their facility. Therefore, they requested an analysis of the Toronto market to drive their decision.
 
 The suitable location is described as follow by the investors: 
-*	A neighborhood with an average to above average total population
-*	Above average populations of 25–40-year-old male and female professionals
-* A high concentration of the population having secondary education
-*	Average to above average median net household incomes
+* A neighborhood with an average to above average total population.
+* A neighborhood with an average to above average net income.
+* A neighborhood with an average to above average employment rate
+* Above average populations of working individuals (between 25 and 45-year-old)
+* A high concentration of the population having a higher education
+
 
 The goal of this analysis is to identify and recommend to the investors which neighborhood(s) of Toronto will be the best choice to establish their facility. The target audience is vegan oriented businesses and restaurants/bars. Starting from these requirements and using data about neighborhoods population, activities and venues, the study will highlight most attractive opportunities.
 
@@ -19,15 +21,15 @@ Collecting relevant data is the first step to take in order to address this prob
 #### Neighborhood Demographic
 This dataset gathers information about age and sex, families and households, language, immigration and internal migration, ethnocultural diversity, Aboriginal peoples, housing, education, income, and labor. City of Toronto Neighborhood Profiles use this Census data to provide a portrait of the demographic, social and economic characteristics of the people and households in each neighborhood.
 
-For administrative purposes, the City of Toronto divides the city into 140 neighborhoods and grouped into six distinct boroughs. The data is sourced from a number of Census tables released by Statistics Canada.
+For administrative purposes, the City of Toronto divides the city into 140 neighborhoods and grouped into six distinct boroughs. The data is sourced from a number of Census tables released by Statistics Canada.<br>
 [City of Toronto Open Data Source on Neighborhood Profiles](https://open.toronto.ca/dataset/neighbourhood-profiles/)
 
 #### Neighborhoods Shapes
-The City of Toronto provides also a GeoJSON data about boundaries of City of Toronto Neighborhoods that will be used for mapping purposes.
+The City of Toronto provides also a GeoJSON data about boundaries of City of Toronto Neighborhoods that will be used for mapping purposes.<br>
 [City of Toronto Open Data Source on Neighborhood Shapes](https://open.toronto.ca/dataset/neighbourhoods/)
 
 #### Neighborhoods Boroughs
-Additional information about boroughs provided by Wikipedia is acquired using web scrapping.
+Additional information about boroughs provided by Wikipedia is acquired using web scrapping.<br>
 [Toronto Neighborhood Borough Designation on Wikipidea](https://en.wikipedia.org/wiki/List_of_city-designated_neighbourhoods_in_Toronto)
 
 #### Neighborhoods Venues 
@@ -129,4 +131,11 @@ Based on the result given by this study, several recommendations can be made:
 * The least options to consider seems to be the neighborhoods of Rouge and Malvern. They are the weakest performers in terms of score and have a poor number of venues as well. Additionally, their location is extremely isolated and would propably not be a good choice as the restaurant needs to be easily accessible.
 
 ## 6. Conclusion
-    
+In order to address the client business problem, the analysis needed data to be collected from various sources (files, web scrapping and API calls), cleaned and then merged. This goal was mainly achieved by exploring the dataset through descriptive statistics and visualization that generates useful insight to better understand Toronto neighborhoods. Finally, based on the data served to the k-means algorithm, the analysis successully highlighted the most attractive neighborhoods to recommend to the client with respect to their requirements.
+
+Although the results seemed to be consistent throughout the study, some limitations should be disclosed. Gathering precise data is not always an easy task, especially when it comes to demographic information. The City of Toronto organise a census every five years about its population. As a matter of fact, the demographic data used to make those recommendations was actually collected by the City of Toronto in 2016. We can easily expect that the situation has changed since then and include that in the decision process. 
+
+Areas of improvement should be specified as well for an upcoming analysis:
+* Narrowing down the venue categories to the sub categories similar to the client project/industry to idenfiy more relevant neighborhoods inside the final cluster
+* Collecting additionnal data to better understand the Toronto market
+* Updating the analysis with the upcoming 2021 City of Toronto census
