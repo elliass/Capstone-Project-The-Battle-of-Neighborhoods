@@ -1,6 +1,3 @@
-# Capstone Project : The Battle of Neighborhoods
-Clustering Analysis of Toronto Neighborhoods
-
 ## 1.	Business Problem
 This study is aimed to help a small vegan restaurant willing to open a new location in Toronto. The investors easily agreed to expand their activities in one of its neighborhoods as Toronto is the most populated city in Canada with high quality of living. 
 Beyond this information, the investors seem to struggle in gathering sufficient details that will help them identify the appropriate location in Toronto where to establish their facility. Therefore, they requested an analysis of the Toronto market to drive their decision.
