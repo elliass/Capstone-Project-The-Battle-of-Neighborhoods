@@ -99,7 +99,6 @@ The clustering analysis is divided in 3 main parts:
 * Filtering top 15 neighborhoods using the calculated score
 ![](https://github.com/elliass/capstone_project/blob/master/images/neighborhoodmap2.png)
 * Repeating each point of step 2 and collecting venues only for those top 15 neighborhoods
-    * Filtering, transforming, grouping and mapping venues
 <p align="center">
   <img src="https://github.com/elliass/capstone_project/blob/master/images/top15final.png">
 </p>
