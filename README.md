@@ -97,7 +97,7 @@ The clustering analysis is divided in 3 main parts:
 ![](/images/neighborhoodmap2.png)
 * Repeating each point of step 2 and collecting venues only for those top 15 neighborhoods
 <p align="center">
-  <img src="/images/top15final.png">
+  <img src="https://github.com/elliass/Toronto_Neighborhoods_Clustering/blob/master/images/top15final.png">
 </p>
 * Clutering based on venues categories
     * Tunning the parameter (k) using Elbow Method to get the optimal number of clusters.
@@ -112,7 +112,7 @@ Identifying groups in the data only based on venues does not produce sufficient 
 
 These questions demonstrate the need for gathering additional data. The next step, will try to highlight cluster inside the demographic data collected initially. As a first step, the neighborhoods were ranked with respect to the client requirements and the results identified 12 neighborhoods as performing better than other neighborhoods for more than one criteria.  
 <p align="center">
-  <img src="/images/top10s.png">
+  <img src="https://github.com/elliass/Toronto_Neighborhoods_Clustering/blob/master/images/top10s.png">
 </p>
 
 Then, passing only the attributes as input and k=3 clusters, the algorithm successfully managed to find out a group of 13 neighborhoods (in lightgreen) that seems to confirm this previous ranking. In fact, most of them appeared in the above list.
