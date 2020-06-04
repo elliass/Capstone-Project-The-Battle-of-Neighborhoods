@@ -61,23 +61,31 @@ The clustering analysis is divided as follow:
 2. Transforming and merging the data to previous dataframe.
 3. The dataframe is presented as follow: neighborhood.
 
+![](https://github.com/elliass/capstone_project/blob/master/images/neighborhood2.png)
+
 #### Dataset 3 - Geographic Coordinates
 1. Pulling geographic data from a GEOJSON file provided by the City of Toronto.
 2. Filtering, transforming and merging the data to previous dataframe.
 3. The final dataframe is presented as follow: neighborhood.
+
+![](https://github.com/elliass/capstone_project/blob/master/images/neighborhood3.png)
 
 ### Step 2: Data Exploration Based on Venues
 * Mapping each neighborhood using folium library.
 * Calling the Foursquare API in order to collect the top 100 venue categories for each neighborhood in a radius of 1km.
     * Filtering data to get only the coordinates for each venue and the category it belongs to.
     * Visualizing all venues in a map.
+    ![](https://github.com/elliass/capstone_project/blob/master/images/top100venues1.png)
     * Transforming data using one hot encoding. Then, grouping the venues by neighborhood using their mean value.
-        * The dataframe is presented as follow: toronto_grouped.
+        * The dataframe is presented as follow:
+        ![](https://github.com/elliass/capstone_project/blob/master/images/top100venues1.png)
     * Filtering and ranking venues the most common venues in each neighborhood.
-        * The dataframe is presented as follow: top_venues.
 * Clutering based on venues categories.
     * Tunning the parameter (k) using Elbow Method to get the optimal number of clusters.
-    * Merging the cluster labels to main dataframe: toronto_merged and mapping the clusters.
+    * Merging the cluster labels to main dataframe and mapping the clusters.
+
+![](https://github.com/elliass/capstone_project/blob/master/images/cluster1.png)
+    
     
 ### Step 3: Data Exploration Based on Requirements
 * Discovering the top 10 neighborhoods based on client requirements: population, net income, education, adults and employment rate.
