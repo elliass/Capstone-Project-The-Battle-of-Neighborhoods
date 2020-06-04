@@ -99,6 +99,7 @@ The clustering analysis is divided in 3 main parts:
 <p align="center">
   <img src="https://github.com/elliass/Toronto_Neighborhoods_Clustering/blob/master/images/top15final.png">
 </p>
+->![](/images/top15final.png)<-
 * Clutering based on venues categories
     * Tunning the parameter (k) using Elbow Method to get the optimal number of clusters.
     * Merging the cluster labels to main dataframe and mapping the clusters.
@@ -114,6 +115,8 @@ These questions demonstrate the need for gathering additional data. The next ste
 <p align="center">
   <img src="https://github.com/elliass/Toronto_Neighborhoods_Clustering/blob/master/images/top10s.png">
 </p>
+| ![](/images/top10s.png) |
+| :--: | 
 
 Then, passing only the attributes as input and k=3 clusters, the algorithm successfully managed to find out a group of 13 neighborhoods (in lightgreen) that seems to confirm this previous ranking. In fact, most of them appeared in the above list.
 ![](/images/cluster2.png)
