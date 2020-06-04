@@ -52,7 +52,9 @@ The clustering analysis is divided as follow:
 #### Dataset 1 - Demographic Features
 1. Pulling demographic data from a CSV file provided by the City of Toronto.
 2. Filtering the data using the client requirements as guide. Selected features are : population, net income, higher education, employment rate and number of adults in each neighborhoods.
-3. The dataframe is presented as follow: neighborhood.
+3. The dataframe is presented as follow:
+
+![](https://github.com/elliass/capstone_project/blob/master/images/neighborhood1.png)
 
 #### Dataset 2 - Boroughs Names and Numbers
 1. Scrapping data about borough names and numbers in order to align them to respective neighborhoods. The information is available on Wikipedia: Toronto Neighborhood Borough Designations.
