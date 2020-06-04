@@ -53,30 +53,30 @@ The clustering analysis is divided in 3 main parts:
 1. Pulling demographic data from a CSV file provided by the City of Toronto.
 2. Filtering the data using the client requirements as guide. Selected features are : population, net income, higher education, employment rate and number of adults in each neighborhoods.
 3. The dataframe is presented as follow:
-![](https://github.com/elliass/capstone_project/blob/master/images/neighborhood1.png)
+![](/images/neighborhood1.png)
 
 #### Dataset 2 - Boroughs Names and Numbers
 1. Scrapping data about borough names and numbers in order to align them to respective neighborhoods. The information is available on Wikipedia: Toronto Neighborhood Borough Designations.
 2. Transforming and merging the data to previous dataframe.
 3. The dataframe is presented as follow:
-![](https://github.com/elliass/capstone_project/blob/master/images/neighborhood2.png)
+![](/images/neighborhood2.png)
 
 #### Dataset 3 - Geographic Coordinates
 1. Pulling geographic data from a GEOJSON file provided by the City of Toronto.
 2. Filtering, transforming and merging the data to previous dataframe.
 3. The final dataframe is presented as follow:
-![](https://github.com/elliass/capstone_project/blob/master/images/neighborhood3.png)
+![](/images/neighborhood3.png)
 
 ### Step 2: Data Exploration Based on Venues
 * Mapping each neighborhood using folium library.
 * Calling the Foursquare API in order to collect the top 100 venue categories for each neighborhood in a radius of 1km.
     * Filtering data to get only the coordinates for each venue and the category it belongs to.
     * Visualizing all venues in a map.
-![](https://github.com/elliass/capstone_project/blob/master/images/top100venues1.png)
+![](/images/top100venues1.png)
     * Transforming data using one hot encoding. Then, grouping the venues by neighborhood using their mean value.
-![](https://github.com/elliass/capstone_project/blob/master/images/onehot1.png)
+![](/images/onehot1.png)
     * Filtering and ranking venues the most common venues in each neighborhood.
-![](https://github.com/elliass/capstone_project/blob/master/images/top10categories.png)
+![](/images/top10categories.png)
 * Clutering based on venues categories.
     * Tunning the parameter (k) using Elbow Method to get the optimal number of clusters.
     * Merging the cluster labels to main dataframe and mapping the clusters.
@@ -86,7 +86,7 @@ The clustering analysis is divided in 3 main parts:
 * Manually standardizing the data to give a positive value for neighborhoods above average and a negative value for the ones below the threshold.
     * Establishing the mean and standard deviation for each feature.
     * Calculating new values and replacing older values in previous main dataframe.
-![](https://github.com/elliass/capstone_project/blob/master/images/standardization.png)
+![](/images/standardization.png)
 * Clustering scaled features.
     * Tunning the parameter (k) using Elbow Method to get the optimal number of clusters.
     * Merging the cluster labels to main dataframe and mapping the clusters.
@@ -95,12 +95,12 @@ The clustering analysis is divided in 3 main parts:
 * From the scaled values previously calculated, a scoring system is established.
     * Each attribute was standardized and then multiplied by a factor depending on the importance accorded to each attribute by the client.
     * Attributes are summed up afterwards in order to generate a score for each neighborhood.
-![](https://github.com/elliass/capstone_project/blob/master/images/score.png)
+![](/images/score.png)
 * Filtering top 15 neighborhoods using the calculated score
-![](https://github.com/elliass/capstone_project/blob/master/images/neighborhoodmap2.png)
+![](/images/neighborhoodmap2.png)
 * Repeating each point of step 2 and collecting venues only for those top 15 neighborhoods
 <p align="center">
-  <img src="https://github.com/elliass/capstone_project/blob/master/images/top15final.png">
+  <img src="/images/top15final.png">
 </p>
 * Clutering based on venues categories
     * Tunning the parameter (k) using Elbow Method to get the optimal number of clusters.
@@ -111,18 +111,18 @@ Identifying groups in the data only based on venues does not produce sufficient 
 * What do these clusters represent ?
 * How are they related or why are they similar ?
 * How many clusters are present in this dataset ?
-![](https://github.com/elliass/capstone_project/blob/master/images/cluster1.png)
+![](/images/cluster1.png)
 
 These questions demonstrate the need for gathering additional data. The next step, will try to highlight cluster inside the demographic data collected initially. As a first step, the neighborhoods were ranked with respect to the client requirements and the results identified 12 neighborhoods as performing better than other neighborhoods for more than one criteria.  
 <p align="center">
-  <img src="https://github.com/elliass/capstone_project/blob/master/images/top10s.png">
+  <img src="/images/top10s.png">
 </p>
 
 Then, passing only the attributes as input and k=3 clusters, the algorithm successfully managed to find out a group of 13 neighborhoods (in lightgreen) that seems to confirm this previous ranking. In fact, most of them appeared in the above list.
-![](https://github.com/elliass/capstone_project/blob/master/images/cluster2.png)
+![](/images/cluster2.png)
 
 In order to extend the analysis, both datasets about venues and demographic were combined and filtered to the 15 most performing neighborhoods using a scoring sytem. Again, the 13 neighborhoods previously identified by the k-mean algorithm came back in the newly selected neighborhoods. From there, the venues around these locations were analysed in order to highlight other clusters within the 15 neighborhoods. 
-![](https://github.com/elliass/capstone_project/blob/master/images/cluster3.png)
+![](/images/cluster3.png)
 
 According to this last visualization, the top 15 neighborhoods chosen seems to be very much similar as it did not successfully split the neighborhood into clusters. Combining this result to previous analysis, we came to the concluison that these neighborhoods are the one that best meet the client requirements and tend to be similar based on the venue catagories.
 
