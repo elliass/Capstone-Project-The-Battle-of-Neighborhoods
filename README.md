@@ -100,10 +100,10 @@ The clustering analysis is divided in 3 main parts:
     * The data is then merged to main dataframe and presented as follow:
 ![](https://github.com/elliass/capstone_project/blob/master/images/score.png)
 * Filtering top 15 neighborhoods using the calculated score
+![](https://github.com/elliass/capstone_project/blob/master/images/top15final.png)
 ![](https://github.com/elliass/capstone_project/blob/master/images/neighborhoodmap2.png)
 * Repeating each point of step 2 and collecting venues only for those top 15 neighborhoods
     * Filtering, transforming, grouping and mapping venues
-![](https://github.com/elliass/capstone_project/blob/master/images/top15final.png)
 * Clutering based on venues categories
     * Tunning the parameter (k) using Elbow Method to get the optimal number of clusters.
     * Merging the cluster labels to main dataframe and mapping the clusters.
