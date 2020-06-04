@@ -19,16 +19,16 @@ Collecting relevant data is the first step to take in order to address this prob
 #### Neighborhood Demographic
 This dataset gathers information about age and sex, families and households, language, immigration and internal migration, ethnocultural diversity, Aboriginal peoples, housing, education, income, and labor. City of Toronto Neighborhood Profiles use this Census data to provide a portrait of the demographic, social and economic characteristics of the people and households in each neighborhood.
 
-For administrative purposes, the City of Toronto divides the city into 140 neighborhoods and grouped into six distinct boroughs. The data is sourced from a number of Census tables released by Statistics Canada. <br>
-(Source: https://open.toronto.ca/dataset/neighbourhood-profiles/)
+For administrative purposes, the City of Toronto divides the city into 140 neighborhoods and grouped into six distinct boroughs. The data is sourced from a number of Census tables released by Statistics Canada.
+[City of Toronto Open Data Source on Neighborhood Profiles](https://open.toronto.ca/dataset/neighbourhood-profiles/)
 
 #### Neighborhoods Shapes
-The City of Toronto provides also a GeoJSON data about boundaries of City of Toronto Neighborhoods that will be used for mapping purposes. <br>
-(Source: https://open.toronto.ca/dataset/neighbourhoods/)
+The City of Toronto provides also a GeoJSON data about boundaries of City of Toronto Neighborhoods that will be used for mapping purposes.
+[City of Toronto Open Data Source on Neighborhood Shapes](https://open.toronto.ca/dataset/neighbourhoods/)
 
 #### Neighborhoods Boroughs
-Additional information about boroughs provided by Wikipedia is acquired using web scrapping. <br>
-(Source: https://en.wikipedia.org/wiki/List_of_city-designated_neighbourhoods_in_Toronto)
+Additional information about boroughs provided by Wikipedia is acquired using web scrapping.
+[Toronto Neighborhood Borough Designation on Wikipidea](https://en.wikipedia.org/wiki/List_of_city-designated_neighbourhoods_in_Toronto)
 
 #### Neighborhoods Venues 
 Finally, data about venues in each neighborhood will be collected by making call to the Foursquare API. 
@@ -63,15 +63,15 @@ The clustering analysis is divided as follow:
 3. The final dataframe is presented as follow: neighborhood.
 
 ### Step 2: Data Exploration Based on Venues
-1. Mapping each neighborhood using folium library.
-2. Calling the Foursquare API in order to collect the top 100 venue categories for each neighborhood in a radius of 1km.
+* Mapping each neighborhood using folium library.
+* Calling the Foursquare API in order to collect the top 100 venue categories for each neighborhood in a radius of 1km.
     * Filtering data to get only the coordinates for each venue and the category it belongs to.
     * Visualizing all venues in a map.
     * Transforming data using one hot encoding. Then, grouping the venues by neighborhood using their mean value.
         * The dataframe is presented as follow: toronto_grouped.
     * Filtering and ranking venues the most common venues in each neighborhood.
         * The dataframe is presented as follow: top_venues.
-3. Clutering based on venues categories.
+* Clutering based on venues categories.
     * Tunning the parameter (k) using Elbow Method to get the optimal number of clusters.
     * Merging the cluster labels to main dataframe: toronto_merged and mapping the clusters.
     
